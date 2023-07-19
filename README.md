@@ -1,7 +1,15 @@
 # Practice InsightFace
 
+- Install
+
 ```bash
-$ poetry run python -m practice_insightface
+$ poetry install
+```
+
+- `input.jpg` → `output.jpg`
+
+```bash
+$ poetry run python ./practice_insightface/from_jpg.py
 Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
 find model: /Users/USER/.insightface/models/buffalo_l/1k3d68.onnx landmark_3d_68 ['None', 3, 192, 192] 0.0 1.0
 Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
@@ -17,4 +25,10 @@ set det-size: (640, 640)
 To use the future default and silence this warning we advise to pass `rcond=None`, to keep using the old, explicitly pass `rcond=-1`.
   P = np.linalg.lstsq(X_homo, Y)[0].T # Affine matrix. 3 x 4
 Faces : 6
+```
+
+- Use Web Camera
+
+```bash
+$ poetry run python ./practice_insightface/from_camera.py
 ```
