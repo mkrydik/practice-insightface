@@ -19,6 +19,8 @@ while True:
     ret, frame = cap.read()
     if ret:
         faces = app.get(np.asarray(frame))
+        print('')
+        print(faces)  # gender・age プロパティが存在する・その他は特徴点の座標値と思われる
         rimg = app.draw_on(frame, faces)
         
         cv2.imshow(window_name, rimg)
